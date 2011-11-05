@@ -11,7 +11,7 @@ public class TestKeyBinding implements BindingExecutionDelegate {
 	
 	
 	public void keyPressed(KeyBindingEvent event) {
-		if (event.getScreen() != ScreenType.GAME_SCREEN) return;
+		if (event.getPlayer().getActiveScreen() != ScreenType.GAME_SCREEN) return;
 		if (event.getBinding().getId() == "TopCatKey") {
 			SpoutManager.getAppearanceManager().setGlobalSkin(event.getPlayer(), "http://s3.amazonaws.com/MinecraftSkins/Top_Cat.png");
 		} else if (event.getBinding().getId() == "PartyTimeKey") {
