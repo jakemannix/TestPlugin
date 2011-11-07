@@ -31,6 +31,7 @@ public class TestPlugin extends JavaPlugin {
 		TestKeyBinding binding = new TestKeyBinding();
 		SpoutManager.getKeyBindingManager().registerBinding("TopCatKey", Keyboard.KEY_L, "Changes global skin to topcat.",binding, this);
 		SpoutManager.getKeyBindingManager().registerBinding("PartyTimeKey", Keyboard.KEY_M, "Creates a Party Test Notification",binding, this);
+        SpoutManager.getKeyBindingManager().registerBinding("TestScreenie", Keyboard.KEY_B, "Tests screenshot grabbing",binding, this);
 		
 		Bukkit.getLogger().log(Level.INFO, "[Spout Test Plugin] Enabled!");
 	}

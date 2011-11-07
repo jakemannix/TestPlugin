@@ -16,7 +16,9 @@ public class TestKeyBinding implements BindingExecutionDelegate {
 			SpoutManager.getAppearanceManager().setGlobalSkin(event.getPlayer(), "http://s3.amazonaws.com/MinecraftSkins/Top_Cat.png");
 		} else if (event.getBinding().getId() == "PartyTimeKey") {
 			SpoutManager.getPlayer(event.getPlayer()).sendNotification(ChatColor.RED + "Party time is now! " + ChatColor.YELLOW + "Oh yeah", "Testing", Material.CAKE);
-		}
+		} else if (event.getBinding().getId().equalsIgnoreCase("TestScreenie")) {
+            SpoutManager.getPlayer(event.getPlayer()).sendScreenshotRequest();
+        }
 	}
 
 	public void keyReleased(KeyBindingEvent arg0) {		

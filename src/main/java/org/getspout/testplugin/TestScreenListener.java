@@ -2,8 +2,14 @@ package org.getspout.testplugin;
 
 import org.getspout.spoutapi.event.screen.ButtonClickEvent;
 import org.getspout.spoutapi.event.screen.ScreenListener;
+import org.getspout.spoutapi.event.screen.ScreenshotReceivedEvent;
 import org.getspout.spoutapi.gui.*;
 import org.getspout.spoutapi.player.SpoutPlayer;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class TestScreenListener extends ScreenListener {
 	private int tries = 0;
@@ -23,5 +29,15 @@ public class TestScreenListener extends ScreenListener {
 			event.getPlayer().sendMessage("Button test successful!");
 		}
 	}
-	
+
+    @Override
+    public void onScreenshotReceived(ScreenshotReceivedEvent event) {
+        BufferedImage bi = event.getScreenshot();
+        try {
+            ImageIO.write(bi, "png", new File("spout.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
