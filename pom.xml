@@ -69,7 +69,7 @@
 	</dependencies>
 
 	<build>
-		<defaultGoal>clean package</defaultGoal>
+		<defaultGoal>clean</defaultGoal>
 		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 		<!-- Resources -->
 		<resources>
