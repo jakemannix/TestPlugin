@@ -18,6 +18,8 @@ public class TestKeyBinding implements BindingExecutionDelegate {
 			SpoutManager.getPlayer(event.getPlayer()).sendNotification(ChatColor.RED + "Party time is now! " + ChatColor.YELLOW + "Oh yeah", "Testing", Material.CAKE);
 		} else if (event.getBinding().getId().equalsIgnoreCase("TestScreenie")) {
             SpoutManager.getPlayer(event.getPlayer()).sendScreenshotRequest();
+        } else if (event.getBinding().getId().equalsIgnoreCase("listtest")) {
+        	new ListScreen(event.getPlayer(), TestPlugin.instance);
         }
 	}
 
