@@ -7,3 +7,29 @@ website: http://www.getspout.org
 main: org.getspout.testplugin.TestPlugin
 
 depend: [Spout]
+
+commands:
+   build:
+      description: Build diamond ore!
+      usage: /<command>
+   maze:
+      description: build a maze!
+      usage: /foobarbaz
+   mark:
+      description: Build diamond ore!
+      usage: /<command>
+   copy:
+      description:
+      usage: /<command>
+   paste:
+      description:
+      usage: /<command>
+   undo:
+      description:
+      usage:
+   redo:
+      description:
+      usage:
+   stair:
+      description:
+      usage:
